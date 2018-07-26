@@ -34,12 +34,12 @@ client_scripts {
 	"quests/missionPeds.lua",
 	"quests/levelSystem.lua",
 	
-	"loot/consumables.lua",
-	"loot/crafting.lua",
-	"loot/newloot.lua",
-	"loot/lootcoords.lua",
-	"loot/trading.lua",
-	"loot/zpills.lua",
+	"loot/client/consumables.lua",
+	"loot/client/crafting.lua",
+	"loot/client/newloot.lua",
+	"loot/client/lootcoords.lua",
+	"loot/client/trading.lua",
+	"loot/client/zpills.lua",
 	
 	"client/warmenu.lua",
 	"client/newplayer.lua",
