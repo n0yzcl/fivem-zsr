@@ -3,28 +3,6 @@ ESX = nil
 
 local firstSpawn = {}
 
-serverVars = {
-	-- Inventory Variables
-	drinkItems = 0,
-	foodItems = 0,
-	bandages = 0,
-	ductTape = 0,
-	engineKit = 0,
-	dirtyWater = 0,
-	cleanWater = 0,
-	cookedMeat = 0,
-	rawMeat = 0,
-	zCredits = 0,
-
-	-- Crafting Variables
-	emptyBottles = 0,
-	woodMaterials = 0,
-	scrapMetal = 0,
-	scrapCloth = 0,
-	gunPowder = 0,
-	zBlood = 0,
-	woodLogs = 0,
-}
 
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 

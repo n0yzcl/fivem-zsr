@@ -171,7 +171,7 @@ Citizen.CreateThread(function()
 				if(Vdist(playerX, playerY, playerZ, pedX, pedY, pedZ) > 75.0)then
 					-- Set ped as no longer needed for despawning
 					--local dropChance = math.random(0,100)
-					Citizen.Trace("Delete unlooted dead Zombie")
+					--Citizen.Trace("Delete unlooted dead Zombie")
 					--RemoveBlip(blip)
 					local model = GetEntityModel(ped)
 					SetEntityAsNoLongerNeeded(ped)

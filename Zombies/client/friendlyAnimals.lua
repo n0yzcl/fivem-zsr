@@ -124,7 +124,7 @@ function AnimalSpawner()
 		hashint = math.random(1, hashTotal)
 		animal = CreatePed(28, animalmodelhash[hashint], newX, newY, z - 500, 0.0, false, false)
 		
-		Citizen.Trace("Animal Spawned")
+		--Citizen.Trace("Animal Spawned")
 		
 		-- Adds the blips for Zombies
 		--SetEntityCoords(entity, X, Y, Z, xAxis, yAxis, zAxis, p7)

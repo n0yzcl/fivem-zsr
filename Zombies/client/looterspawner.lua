@@ -103,7 +103,7 @@ Citizen.CreateThread(function()
 				end
 			until canSpawn
 			
-			Citizen.Trace("Looter spawning")
+			--Citizen.Trace("Looter spawning")
 			looter = CreatePed(4, GetHashKey(choosenLooter), newX, newY, newZ, 0.0, true, true)
 			
 			SetPedAccuracy(looter, 25)

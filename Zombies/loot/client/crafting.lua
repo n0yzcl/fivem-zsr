@@ -76,11 +76,11 @@ print('checked')
 
 end)
 
-RegisterNetEvent("sendData")
+--[[RegisterNetEvent("sendData")
 AddEventHandler("sendData", function(rows)
 	bandages = ['@bandages']
 	cleanwater = ['@cleanwater']
-end)
+end)--]]
 
 -- Saves data to MySQL database every so often
 Citizen.CreateThread(function()
