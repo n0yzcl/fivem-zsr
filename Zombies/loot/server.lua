@@ -64,7 +64,7 @@ AddEventHandler('saveData', function(variables)
 end)
 
 RegisterServerEvent('loadData')
-AddEventHandler('loadData', function(variables)
+AddEventHandler('loadData', function()
 
 	print('loading data')
 	local identifier = GetPlayerIdentifiers(source)[1]
