@@ -69,7 +69,7 @@ AddEventHandler('loadData', function()
 	print('loading data')
 	local identifier = GetPlayerIdentifiers(source)[1]
 	
-	MySQL.Async.fetchAll('SELECT * FROM crafting WHERE identifier = @identifier', {['@identifier'] = identifier}, function(players)
+	MySQL.Async.fetchAll('SELECT `bandages`, `cleanwater`, `cookedmeat`, `dirtywater`, `drinkitems`, `ducktape`, `emptybottles`, `enginekit`, `fooditems`, `gunpowder`, `rawmeat`, `scrapcloth`, `scrapmetal`, `woodlogs`, `woodmaterials`, `zblood`, `zcredits` FROM `crafting` WHERE identifier = @identifier', {['@identifier'] = identifier}, function(players)
 		print(players[1].identifier)
 		TriggerClientEvent("sendData", rows)
 	end)
