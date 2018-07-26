@@ -3,6 +3,29 @@ ESX = nil
 
 local firstSpawn = {}
 
+serverVars = {
+	-- Inventory Variables
+	drinkItems = 0,
+	foodItems = 0,
+	bandages = 0,
+	ductTape = 0,
+	engineKit = 0,
+	dirtyWater = 0,
+	cleanWater = 0,
+	cookedMeat = 0,
+	rawMeat = 0,
+	zCredits = 0,
+
+	-- Crafting Variables
+	emptyBottles = 0,
+	woodMaterials = 0,
+	scrapMetal = 0,
+	scrapCloth = 0,
+	gunPowder = 0,
+	zBlood = 0,
+	woodLogs = 0,
+}
+
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 RegisterServerEvent("CreateData")
@@ -69,9 +92,10 @@ AddEventHandler('loadData', function()
 	print('loading data')
 	local identifier = GetPlayerIdentifiers(source)[1]
 	
-	MySQL.Async.fetchAll('SELECT `bandages`, `cleanwater`, `cookedmeat`, `dirtywater`, `drinkitems`, `ducktape`, `emptybottles`, `enginekit`, `fooditems`, `gunpowder`, `rawmeat`, `scrapcloth`, `scrapmetal`, `woodlogs`, `woodmaterials`, `zblood`, `zcredits` FROM `crafting` WHERE identifier = @identifier', {['@identifier'] = identifier}, function(players)
+	MySQL.Async.fetchAll('SELECT `bandages`, `cleanwater`, `cookedmeat`, `dirtywater`, `drinkitems`, `ducktape`, `emptybottles`, `enginekit`, `fooditems`, `gunpowder`, `rawmeat`, `scrapcloth`, `scrapmetal`, `woodlogs`, `woodmaterials`, `zblood`, `zcredits` FROM `crafting` WHERE identifier = @identifier', {['@identifier'] = identifier}, function(serverVars)
 		print(players[1].identifier)
-		TriggerClientEvent("sendData", rows)
+		print('data loaded')
+		--TriggerClientEvent("sendData", serverVars)
 	end)
 
 end)
