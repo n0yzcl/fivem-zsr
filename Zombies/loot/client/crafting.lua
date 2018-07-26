@@ -78,8 +78,8 @@ end)
 
 RegisterNetEvent("sendData")
 AddEventHandler("sendData", function(rows)
-	bandages = @bandages
-	cleanwater = @cleanwater
+	bandages = ['@bandages']
+	cleanwater = ['@cleanwater']
 end)
 
 -- Saves data to MySQL database every so often
